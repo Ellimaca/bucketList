@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <section>
+    <div class="">
+        <h1 class="title strong has-text-centered">Here are all of the wishes !</h1>
+    </div>
+    {% for wish in wishes %}
+        <article>
+            <div class="box mb-4"><a href="{{ path( 'wish_detail', {id:wish.id} ) }}"> {{ wish.title }}</a>
+                <p class="fw-bold">Ajouté le : </p><div>{{ wish.dateCreated|date("d/m/y") }}</div>
+                <p class="fw-bold">Catégorie : </p><div>{{ wish.category.name }}</div>
+            </div>
+
+        </article>
+        </section>
+    {% endfor %}
+
+{% endblock %}
