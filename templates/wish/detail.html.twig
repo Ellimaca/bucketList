@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+   <section>
+      <article>
+         <div>
+            <p class="fw-bold mb-2">Wish : </p>
+            <p class="mb-5">{{ wish.title }}</p>
+         <div>
+
+            <div>
+               <p class="fw-bold mb-2">Category : </p>
+               <p class="mb-5">{{ wish.category.name }}</p>
+            <div>
+
+         <div>
+            <p class="fw-bold mb-2">Author : </p>
+            <p class="mb-5">{{ wish.author }}</p>
+         </div>
+
+         <div>
+            <p class="fw-bold mb-2">Description : </p>
+            <p class="mb-5">{{ wish.description }}</p>
+         </div>
+
+         <div>
+            <p class="fw-bold mb-2">Date created </p>
+            <p class="mb-5">{{ wish.dateCreated|date("d/m/Y") }}</p>
+         </div>
+
+               <div>
+                  <p class="fw-bold mb-2">Comments </p>
+
+                  {% for reaction in reactions %}
+                     <article>
+                        <div> Username : {{ wish.reactions.username }} </div>
+                     </article>
+
+                  {% endfor %}
+
+               </div>
+
+      </article>
+   </section>
+
+   <section>
+      <div class="container">
+         <div class="box center">
+
+            {{ form_start(reactionForm) }}
+
+            {{ form_widget(reactionForm) }}
+            <button type="submit" class="btn btn-primary mt-4 col-2">Envoyer</button>
+
+            {{ form_end(reactionForm) }}
+
+         </div>
+      </div>
+   </section>
+{% endblock %}
+
+{% block title %}
+
+
+{% endblock %}
+

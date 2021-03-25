@@ -9,5 +9,45 @@
 </head>
 <body>
 <h1>TEST!!</h1>
+
+
+{#
+commentaires
+multi-lignes
+invisibles !
+#}
+
+{% set username = "Ellimaca" %}
+
+{{ username|upper|trim }}
+
+{% if username == "Ellimaca" %}
+    <h1>Coucou Ellimaca</h1>
+{% else %}
+    <h1>T'es qui toi?</h1>
+{% endif %}
+
+{% set colors = ["bleu", "rouge", "jaune"] %}
+
+{% for c in colors %}
+    <div> {{ c|capitalize }}</div>
+{% else %}
+    <div>Pas de couleurs ici ! </div>
+{% endfor %}
+
+{% for i in 0..10 %}
+    <div> {{ i }}</div>
+{%  endfor %}
+
+<div>
+{{ "+ 1 month "|date("d/m/y") }}
+</div>
+
+
+
+<h1>Accueil depuis Twig !!! </h1>
+
+
+
 </body>
 </html>

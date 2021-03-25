@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'Syne Mono';
+}
+
+h1{
+    font-family: "Syne Mono";
+}
+body {
+    font-family: "Syne Mono";
+}
+.navbar-item {
+    font-family: "Syne Mono";
+    font-weight: bolder;
+    color: darkgoldenrod;
+    font-size: 25px;
+}
+.hero {
+    background-image: url("../images/bandeau.jpg");
+}
+
+
+.hero-body {
+    text-align: center;
+    font-size: 45px;
+}
+
+.form-error-icon
+{
+display: none;
+}
+
+label{
+margin-bottom: 10px;
+margin-top: 5px;
+}
+
+.fw-bold {
+    font-size: 25px;
+}
+
+.mb-5 {
+    font-size: 20px;
+}
+
+
+

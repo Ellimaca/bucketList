@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Add your wish !
+{% endblock %}
+
+{% block body %}
+
+    <div class="container mb-5 content">
+        <figure>
+            <blockquote class="blockquote">
+                <p>Create your wish</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+               Bucket List
+            </figcaption>
+        </figure>
+    </div>
+<div class="container">
+
+        <div class="box center">
+    {{ form_start(wishForm) }}
+
+    {{ form_widget(wishForm) }}
+    <button type="submit" class="btn btn-primary mt-4 col-2">Envoyer</button>
+
+    {{ form_end(wishForm) }}
+
+    </div>
+</div>
+{% endblock %}
+
